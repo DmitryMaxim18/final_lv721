@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    command: bash -c "python create_db.py && python server.py 127.0.0.1:8888"
+    ports:
+      - "8888:8888"
+
+  mydb:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: music
