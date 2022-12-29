@@ -19,6 +19,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Go to app folder
-      run: working-directory:./final_demo
+      run: cd final_demo
     - name: Build the Docker image
       run: docker-compose up --build
