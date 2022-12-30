@@ -17,10 +17,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+    - name: Checkout
     - uses: actions/checkout@v3
     - name: Go to app folder
       run: |
         cd final_demo
-        ls 
+        ls
+        
+    - name: Install compose
+    - uses: KengoTODA/actions-setup-docker-compose@main
+      with:
+        version: '2.14.2' # the full version of `docker-compose` command
+        
     - name: Build the Docker image
       run: docker-compose up --build
