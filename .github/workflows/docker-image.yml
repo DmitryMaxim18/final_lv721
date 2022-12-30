@@ -32,5 +32,6 @@ jobs:
         
     - name: Build the Docker image
       run: |
+        cd final_demo
         cat docker-compose.yml
         docker-compose up -d --build
