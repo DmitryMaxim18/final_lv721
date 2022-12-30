@@ -25,10 +25,10 @@ jobs:
         cd final_demo
         ls
         
-    - name: Install compose
-      uses: KengoTODA/actions-setup-docker-compose@main
-      with:
-        version: '2.14.2' # the full version of `docker-compose` command
+   # - name: Install compose
+   #  uses: KengoTODA/actions-setup-docker-compose@main
+   #   with:
+   #    version: '2.14.2' # the full version of `docker-compose` command
         
     - name: Build the Docker image
       run: docker-compose -f docker-compose.yml up -d --build
