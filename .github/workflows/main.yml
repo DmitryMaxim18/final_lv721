@@ -19,9 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Go to app folder
-      run: |
-        cd final_demo
-        ls
+      run: cd final_demo
     - name: Install Compose
     - uses: KengoTODA/actions-setup-docker-compose@main
       with:
