@@ -20,10 +20,6 @@ jobs:
     
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Go to app folder
-      run: |
-        cd final_demo
-        ls
         
    # - name: Install compose
    #  uses: KengoTODA/actions-setup-docker-compose@main
